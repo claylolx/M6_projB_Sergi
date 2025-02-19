@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre España</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="explanation">
+        <button id="close-explanation">✖</button>
+        <h2>🔊 Nueva funcionalidad</h2>
+        <p>Ahora puedes escuchar el nombre de la comunidad autonoma, provicina o población seleccionada haciendo click en el botón 🔊.</p>
+        <p>Esta funcionalidad utiliza la API de navegador <strong>SpeechSynthesis</strong> para convertir texto en voz.</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis</a>
+    </div>
+
+    <button id="theme-toggle">Modo Oscuro🌙</button>
+
+    <h1>Descubre España</h1>
+    <form action="">
+        <label>Comunitat: </label>
+        <select name="ccaa" id="ccaa">
+            <option value="" disabled selected>Selecciona una opció</option>
+        </select>
+        <button class="speak-btn" data-target="ccaa">🔊</button>
+        <br><br>
+
+        <label>Província: </label>
+        <select name="provincia" id="provincia">
+            <option value="" disabled selected>Selecciona una opció</option>
+        </select>
+        <button class="speak-btn" data-target="provincia">🔊</button>
+        <br><br>
+
+        <label>Població: </label>
+        <select name="poblacion" id="poblacion">
+            <option value="" disabled selected>Selecciona una opció</option>
+        </select>
+        <button class="speak-btn" data-target="poblacion">🔊</button>      
+        <br><br>
+
+        <input type="submit" value="ENVIAR" id="submit">
+    </form>
+    
+    <div id="image-container"></div>
+
+    <!-- Tooltip explicativo -->
+    <div id="tooltip" class="tooltip">Haz click en el altavoz 🔊 para escuchar la selección.</div>
+
+</body>
+<script src="script.js"></script>
+
+</html>

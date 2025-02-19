@@ -1,0 +1,187 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    height: auto;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+select, input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+select {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+select option{
+    color: black;
+}
+
+select:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+input[type="submit"] {
+    background: #ff6f61;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: #e65c50;
+}
+
+#image-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.image-box {
+    width: 400px;
+    height: 300px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.image-box:hover img {
+    transform: scale(1.1);
+}
+
+.image-caption {
+    padding: 10px;
+    font-size: 14px;
+    color: #444;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+}
+
+#explanation {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    max-width: 300px;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#explanation h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: yellow;
+}
+
+#explanation p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+#close-explanation {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#close-explanation:hover {
+    color: red;
+}
+
+/* Estil del botó de mode fosc */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+}
+
+#theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Modo oscuro */
+.dark-mode {
+    background: linear-gradient(135deg, #121212, #1e1e1e);
+    color: #ddd;
+}
+
+.dark-mode form {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode select, .dark-mode input[type="submit"] {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.dark-mode .image-box {
+    background: #333;
+}
+
+.dark-mode .image-caption {
+    color: white;
+}
+
