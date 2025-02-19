@@ -13,10 +13,11 @@
     <div id="explanation">
         <button id="close-explanation">✖</button>
         <h2>🔊 Nueva funcionalidad</h2>
-        <p>Ahora puedes escuchar el nombre de la comunidad autonoma, provicina o población seleccionada haciendo click en el botón 🔊.</p>
-        <p>Esta funcionalidad utiliza la API de navegador <strong>SpeechSynthesis</strong> para convertir texto en voz.</p>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis</a>
-    </div>
+        <p>Se ha implementado la API <strong>SpeechSynthesis</strong> para convertir texto en voz.</p>
+        <p>Los botones 🔊 están vinculados a los selectores mediante <code>data-target</code>. Al hacer clic, se obtiene la opción seleccionada y se pasa a <code>SpeechSynthesisUtterance</code> con idioma <code>es-ES</code> para su reproducción.</p>
+        <p>Si el navegador no soporta la API, se muestra un mensaje de alerta.</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis" target="_blank">Documentación de SpeechSynthesis</a>
+    </div>    
 
     <button id="theme-toggle">Modo Oscuro🌙</button>
 
